@@ -10,6 +10,7 @@ dj-database-url = "*"
 psycopg2 = "*"
 gunicorn = "*"
 django-debug-toolbar = "*"
+python-decouple = '*'
 
 [requires]
 python_version = "3.7"
