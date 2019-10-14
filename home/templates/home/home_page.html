@@ -1,7 +1,16 @@
 {% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
 {% load static %}
 
 {% block content %}
-    <h1>{{ self.banner_title }}</h1>
-    <p>{{ self.banner_subtitle}}</p>
+
+  {% image self.banner_image fill-800x400 as banner_image %}
+
+  <div class="jumbotron">
+    <h1 class="display-4">{{ self.banner_title }}</h1>
+    <p class="lead">{{ self.banner_subtitle|richtext }}</p>
+  </div>
+
+  <img src="{{ banner_image.url }}" alt="">
 {% endblock content %}
