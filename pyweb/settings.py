@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+    'debug_toolbar',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -68,9 +69,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'pyweb.urls'
@@ -147,7 +148,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'client')
 ]
 
-print(STATICFILES_DIRS)
 # ManifestStaticFilesStorage is recommended in production, to prevent outdated
 # Javascript / CSS assets being served from cache (e.g. after a Wagtail upgrade).
 # See https://docs.djangoproject.com/en/2.2/ref/contrib/staticfiles/#manifeststaticfilesstorage
@@ -167,3 +167,8 @@ WAGTAIL_SITE_NAME = "pyweb"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': 'contrib.toolbar.show_toolbar',
+}
+

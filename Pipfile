@@ -9,6 +9,7 @@ verify_ssl = true
 dj-database-url = "*"
 psycopg2 = "*"
 gunicorn = "*"
+django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.7"
