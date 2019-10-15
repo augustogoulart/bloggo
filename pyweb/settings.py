@@ -36,6 +36,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 INSTALLED_APPS = [
     'home',
     'search',
+    'flex',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
