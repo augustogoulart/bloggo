@@ -14,11 +14,9 @@ class HomePage(Page):
     max_count = 1
 
     banner_title = models.CharField(max_length=256, blank=False, null=True)
-    banner_subtitle = RichTextField(features=['bold', 'italic'])
 
     content_panels = Page.content_panels + [
         FieldPanel("banner_title"),
-        FieldPanel("banner_subtitle"),
     ]
 
     def get_context(self, request, *args, **kwargs):
@@ -44,7 +42,6 @@ class ArticlePage(Page):
     """
 
     article_title = models.CharField(max_length=255)
-    article_subtitle = RichTextField(features=['bold', 'italic', 'link'], null=True, blank=True)
     content = StreamField(
         [
             ("richtext_editor", RichTextBlock())
@@ -55,7 +52,6 @@ class ArticlePage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel("article_title"),
-        FieldPanel("article_subtitle"),
         StreamFieldPanel("content")
     ]
 
