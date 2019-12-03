@@ -4,21 +4,23 @@
 {% load static %}
 
 {% block content %}
-
-  {% image self.banner_image fill-800x400 as banner_image %}
-
-  <div class="jumbotron">
-    <h1 class="display-4">{{ self.banner_title }}</h1>
-    <p class="lead">{% include_block self.banner_subtitle %}</p>
-  </div>
-
-  <div class="container">
-    {% for article in articles %}
-      <div class="row mt-5 mb-5">
-        <div class="col-md-12">
-          <a href="{{ article.url }}"><h2>{{ article.article_title }}</h2></a>
+  <div class="container ">
+    <div class="row">
+      {% for article in articles %}
+        <div class="col-4">
+          <a href="{{ article.url }}">
+          <div class="card">
+            <img src="https://via.placeholder.com/309x200" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ article.article_title }}</h5>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+          </div>
+            </a>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 {% endblock content %}

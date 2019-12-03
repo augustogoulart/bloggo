@@ -13,9 +13,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   {# Global stylesheets #}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/pyweb.css' %}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/pyweb.css' %}">
+
   {% block extra_css %}
     {# Override this in templates to add extra stylesheets #}
   {% endblock %}
@@ -24,7 +25,11 @@
 <body class="{% block body_class %}{% endblock %}">
 {% wagtailuserbar %}
 
+{% include "core/blocks/navbar.html" %}
+
+<main class="main-block">
 {% block content %}{% endblock %}
+</main>
 
 {# Global javascript #}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
