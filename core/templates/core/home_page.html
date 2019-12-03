@@ -5,12 +5,12 @@
 
 {% block content %}
   <div class="container ">
-    <div class="row">
+
       {% for article in articles %}
-        <div class="col-4">
+        <div class="row justify-content-md-center">
+        <div class="col-8">
           <a href="{{ article.url }}">
           <div class="card">
-            <img src="https://via.placeholder.com/309x200" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ article.article_title }}</h5>
               <p class="card-text">
@@ -20,7 +20,7 @@
           </div>
             </a>
         </div>
+        </div>
       {% endfor %}
-    </div>
   </div>
 {% endblock content %}
