@@ -1,6 +1,10 @@
 .card {
     margin-bottom: 30px;
-    border-radius: 5px;
+    border-radius: 15px;
+}
+
+.round-corner {
+    border-radius: 15px;
 }
 
 a, a:hover {

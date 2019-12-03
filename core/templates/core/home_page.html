@@ -13,6 +13,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">{{ article.article_title }}</h5>
+             {% include_block article.article_subtitle %}
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
               </p>
