@@ -3,6 +3,9 @@
     border-radius: 15px;
 }
 
+.no-border {
+    border: none;
+}
 .round-corner {
     border-radius: 15px;
 }
@@ -16,11 +19,33 @@ a, a:hover {
     margin-top: 2rem;
 }
 
-
+.modal-body{
+    padding: 0;
+    height: 70px;
+}
+.modal-footer {
+    padding: 0.5rem;
+}
 /*Box shadow animation*/
 .card {
     box-shadow: 0 5px 5px rgba(0, 1, 4, 0.08);
 }
+
+input.form-control{
+    height: 70px;
+    border: none;
+}
+
+.btn.btn-primary.submit-search {
+    border-radius: 10px;
+}
+
+.search-form::placeholder {
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.51);
+    vertical-align: bottom;
+}
+
 .card::after {
   content: "";
   border-radius: 15px;
@@ -33,8 +58,7 @@ a, a:hover {
   box-shadow: 0 5px 15px rgba(0, 1, 4, 0.09);
   opacity: 0;
   -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  /*transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);*/
-    transition: all .25s cubic-bezier(.02,.01,.47,1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card:hover {
@@ -44,4 +68,10 @@ a, a:hover {
 
 .card:hover::after {
     opacity: 1;
+}
+
+/*Override boostrap blue glow around input fields*/
+input[type="text"], textarea {
+    outline: none;
+    box-shadow:none !important;
 }
