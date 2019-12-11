@@ -8,5 +8,3 @@ media/
 
 .pytest_cache
 
-// commenting this out until I fix GH actions
-.github
