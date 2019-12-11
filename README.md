@@ -1,5 +1,5 @@
 # Bloggo
 
-![](https://github.com/actions/bloggo/workflows/.github/workflows/tests.yml/badge.svg)
+[![GitHub Actions: Tests](https://github.com/augustogoulart/bloggo/workflows/Tests/badge.svg)]()
 
 Source code for https://augustogoulart.com
