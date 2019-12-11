@@ -1,3 +1,3 @@
-# PyWeb
+# Bloggo
 
-Playing around with Wagtail CMS (and maybe building something)
+Source code for https://augustogoulart.com

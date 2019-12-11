@@ -1,5 +1,5 @@
 """
-WSGI config for pyweb project.
+WSGI config for bloggo project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pyweb.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bloggo.settings")
 
 application = Cling(get_wsgi_application())
 
