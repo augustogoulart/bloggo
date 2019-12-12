@@ -8,17 +8,19 @@
       {% for article in articles %}
         <div class="row justify-content-md-center">
         <div class="col-md-8 col-sm-12">
-          <a href="{{ article.url }}">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">{{ article.article_title }}</h5>
-             {% include_block article.article_subtitle %}
-              <p class="card-text">
+          <article class="post-card">
+            <a href="{{ article.url }}" class="post-card-link">
+              <header class="post-card-header">
+                <h3 class="post-card-title">{{ article.article_title }}</h3>
+              </header>
+              <div class="post-card-content">
+                Awesome article content
+              </div>
+              <footer class="post-card-footer">
                 <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
+              </footer>
             </a>
+          </article>
         </div>
         </div>
       {% endfor %}
