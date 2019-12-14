@@ -26,11 +26,12 @@
 <body class="{% block body_class %}{% endblock %}">
 {% wagtailuserbar %}
 
-<main class="main-block">
-  <aside class="sidebar">
-    
-  </aside>
-  {% block content %}{% endblock %}
+<main class="">
+  {% include "core/blocks/sidebar.html" %}
+  <section class="content">
+    {% include "core/blocks/navbar.html" %}
+    {% block content %}{% endblock %}
+  </section>
 </main>
 
 {# Global javascript #}
