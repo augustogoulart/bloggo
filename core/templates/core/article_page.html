@@ -3,20 +3,20 @@
 
 {% block content %}
 
-  <div class="container">
+  <div class="container article-content">
     <div class="row justify-content-md-center">
-      <div class="col-md-6 text-center">
+      <div class="col-12 text-center">
         <h1 class="display-6">{{ self.article_title }}</h1>
       </div>
     </div>
-  </div>
 
   <div class="row justify-content-md-center">
-    <div class="col-md-6">
+    <div class="col-10">
       {% for block in page.content %}
         {% include_block block %}
       {% endfor %}
     </div>
+  </div>
   </div>
 
 {% endblock %}
