@@ -138,8 +138,12 @@ input[type="text"], textarea {
     }
 }
 
-.article-content, .article-list {
+.article-content {
     padding-top: 3rem;
+}
+
+.article-list {
+    padding-top: 2rem;
 }
 
 nav.social-links {
