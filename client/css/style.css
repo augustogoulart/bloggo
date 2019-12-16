@@ -1,6 +1,7 @@
 .no-border {
     border: none;
 }
+
 .round-corner {
     border-radius: 15px;
 }
@@ -12,17 +13,18 @@ a, a:hover {
     color: black;
 }
 
-.modal-body{
+.modal-body {
     padding: 0;
     height: 70px;
 }
+
 .modal-footer {
     padding: 0.5rem;
 }
 
-input.form-control{
+input.form-control {
     height: 2rem;
-    border: 1px solid rgba(21, 232, 204, 0.57);
+    border: 1px solid rgba(52, 152, 219, 0.57);
 
 }
 
@@ -69,18 +71,18 @@ input.form-control{
 /*Override boostrap blue glow around input fields*/
 input[type="text"], textarea {
     outline: none;
-    box-shadow:none !important;
-    background-color: #0e6857;
+    box-shadow: none !important;
+    background-color: #2b77ad;
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #bbb;
+    color: #bbb;
 }
 
 .sidebar {
-    background: #16a085;
+    background: linear-gradient(to bottom, #2c3e50 0%, #3498db 100%);
     align-items: center;
-    border-right: 1px solid rgba(21, 232, 204, 0.57);
+    border: 1px solid rgba(52, 152, 219, 0.57);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -88,50 +90,45 @@ input[type="text"], textarea {
     padding: 2rem;
     text-align: center;
     width: 310px;
+    color: #e2e2e2;
 }
 
 .avatar {
     border-radius: 50%;
     height: 3.75rem;
     width: 3.75rem;
-    border: 1px solid rgba(21, 232, 204, 0.57);
+    border: 1px solid rgba(52, 152, 219, 0.57);
 }
 
 .content {
     margin-left: 310px;
 }
 
-.site-nav {
-    border-bottom: 1px solid #eaeaea;
-    padding: 0 30px;
-    display: flex
-}
-
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     .site-nav {
         padding: 0
     }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     .content {
         margin-left: 260px
     }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     .content {
         margin-left: 0
     }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     .sidebar {
         width: 260px
     }
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     .sidebar {
         width: 100%;
         position: relative;
