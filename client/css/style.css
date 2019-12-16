@@ -21,18 +21,13 @@ a, a:hover {
 }
 
 input.form-control{
-    height: 70px;
-    border: none;
+    height: 2rem;
+    border: 1px solid rgba(21, 232, 204, 0.57);
+
 }
 
 .btn.btn-primary.submit-search {
     border-radius: 10px;
-}
-
-.search-form::placeholder {
-    font-size: 1.5em;
-    color: rgba(0, 0, 0, 0.51);
-    vertical-align: bottom;
 }
 
 /*Post-card*/
@@ -75,6 +70,11 @@ input.form-control{
 input[type="text"], textarea {
     outline: none;
     box-shadow:none !important;
+    background-color: #0e6857;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #bbb;
 }
 
 .sidebar {
