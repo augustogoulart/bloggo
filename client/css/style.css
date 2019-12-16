@@ -51,10 +51,11 @@ input.form-control {
 }
 
 .post-card-title {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 600;
     margin: 0 0 10px 0;
-    color: #1f1f1f
+    color: #1f1f1f;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .post-card-content {
@@ -164,4 +165,41 @@ nav.social-links ul {
 
 .social-links i:hover {
     color: #1fa1f2;
+}
+
+.article-title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.article-content {
+    font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 0.069rem;
+}
+
+.sidebar-brand {
+    font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.reading-time {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #3498db;
+    text-align: center;
+    line-height: 21px;
+    font-size: 13px;
+    vertical-align: middle;
+    margin-top: -3px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.min-read {
+    font-weight: 500;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
 }
