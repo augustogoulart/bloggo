@@ -89,7 +89,7 @@ input[type="text"], textarea {
     position: fixed;
     padding: 2rem;
     text-align: center;
-    width: 310px;
+    width: 20vw;
     color: #e2e2e2;
 }
 
@@ -101,7 +101,7 @@ input[type="text"], textarea {
 }
 
 .content {
-    margin-left: 310px;
+    margin-left: 20vw;
 }
 
 @media only screen and (max-width: 768px) {
@@ -139,4 +139,29 @@ input[type="text"], textarea {
 
 .article-content, .article-list {
     padding-top: 2rem;
+}
+
+nav.social-links {
+    margin: 2rem auto;
+    width: 100%;
+
+}
+
+nav.social-links ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.social-links i {
+    font-size: 20px;
+    color: #e2e2e2;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.social-links i:hover {
+    color: #1fa1f2;
 }
