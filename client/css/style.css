@@ -180,7 +180,9 @@ nav.social-links ul {
 }
 
 .sidebar-brand {
-    font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
 }
 
 .reading-time {
