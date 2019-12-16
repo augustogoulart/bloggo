@@ -70,10 +70,9 @@ input.form-control {
 }
 
 /*Override boostrap blue glow around input fields*/
-input[type="text"], textarea {
+input[type="search"], textarea {
     outline: none;
     box-shadow: none !important;
-    background-color: #2b77ad;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -147,9 +146,8 @@ input[type="text"], textarea {
 }
 
 nav.social-links {
-    margin: 2rem auto;
     width: 100%;
-
+    margin: 2rem auto 0;
 }
 
 nav.social-links ul {
@@ -208,4 +206,52 @@ nav.social-links ul {
 .min-read {
     font-weight: 500;
     /*font-family: 'Source Sans Pro', sans-serif;*/
+}
+
+/*Searchbox*/
+.searchbox {
+    margin-top: 1rem;
+    position: relative;
+    border: 1px solid rgba(50, 141, 205, 0.57);
+    background: #3b546b;
+    border-radius: 4px;
+}
+.searchbox label {
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    left: 10px;
+    top: 3px;
+}
+.searchbox span {
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    cursor: pointer;
+}
+.searchbox span:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+.searchbox input {
+    display: inline-block;
+    color: #fff;
+    width: 100%;
+    height: 2rem;
+    background: transparent;
+    border: 0;
+    padding: 0 25px 0 30px;
+    margin: 0;
+    font-weight: 300;
+}
+.searchbox input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+.searchbox input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+.searchbox input:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+.searchbox input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
