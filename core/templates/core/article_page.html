@@ -5,18 +5,28 @@
 
   <div class="container article-content">
     <div class="row justify-content-md-center">
+
       <div class="col-12 text-center">
         <h1 class="display-6 article-title">{{ self.article_title }}</h1>
       </div>
+
+
+      <div class="col-12 text-center">
+        <div class="text-muted">
+          October 30, 2019 <span class="reading-time">5</span> <span class="min-read">Min Read</span>
+        </div>
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+
     </div>
 
-  <div class="row justify-content-md-center">
-    <div class="col-10 article-content">
-      {% for block in page.content %}
-        {% include_block block %}
-      {% endfor %}
+    <div class="row justify-content-md-center">
+      <div class="col-10">
+        {% for block in page.content %}
+          {% include_block block %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
   </div>
 
 {% endblock %}
