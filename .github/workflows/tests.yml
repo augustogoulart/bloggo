@@ -51,15 +51,15 @@ jobs:
       env:
         POSTGRES_HOST: 0.0.0.0
         POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
-        POSTGRES_NAME: postgres
-        POSTGRES_USER: postgres
-        POSTGRES_PASSWORD: postgres
 
     - name: Run application
       run: |
         pipenv run python manage.py collectstatic
         pipenv run python manage.py runserver &
-
+      env:
+        POSTGRES_HOST: 0.0.0.0
+        POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
+        
     - name: Run test suite
       run: |
         pipenv run pytest
