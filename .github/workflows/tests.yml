@@ -22,17 +22,18 @@ jobs:
         pip install pipenv
         pipenv install
 
+    - name: Copy environment variables
+      run: |
+        cp contrib/.env-sample .env
+
+    - name: Run application
+      run: |
+        pipenv run python manage.py collectstatic
+        pipenv run python manage.py runserver &
+
     - name: Run test suite
       run: |
         pipenv run pytest
-      env:
-        ALLOWED_HOSTS: 'localhost'
-        BASE_URL: 'http://localhost:8000'
-        DATABASE_URL: "postgres://postgres:postgres@localhost/postgres"
-        DEBUG: False
-        SECRET_KEY: super-secret-key
-        STATICFILES_STORAGE: 'django.contrib.staticfiles.storage.StaticFilesStorage'
-
 
     - name: Deploy to Heroku
       env:
