@@ -98,8 +98,7 @@ WSGI_APPLICATION = 'bloggo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+default_database_config_dict = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('POSTGRES_NAME', default='postgres'),
         'USER': config('POSTGRES_USER', default='postgres'),
@@ -107,6 +106,13 @@ DATABASES = {
         'HOST': config('POSTGRES_HOST', default='localhost'),
         'PORT': config('POSTGRES_PORT', default=5432)
     }
+
+has_database_url = config('DATABASE_URL', default=False)
+
+default_database = config('DATABASE_URL', cast=db_url) if has_database_url else default_database_config_dict
+
+DATABASES = {
+    'default': default_database
 }
 
 
