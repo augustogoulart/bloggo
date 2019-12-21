@@ -1,6 +1,6 @@
 from django.db import models
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
-from wagtail.core.fields import RichTextField, StreamField
+from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 from .blocks import RichTextBlock
 
@@ -42,6 +42,7 @@ class ArticlePage(Page):
     """
 
     article_title = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
     content = StreamField(
         [
             ("richtext_editor", RichTextBlock())

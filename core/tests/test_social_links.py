@@ -1,5 +1,7 @@
 import pytest
-
+from ..models import ArticlePage
+from django.utils import timezone
+from datetime import datetime
 
 @pytest.mark.django_db()
 def test_page_has_social_links(client):
@@ -11,5 +13,4 @@ def test_page_has_social_links(client):
     ]
 
     resp = client.get('/')
-
     assert False not in [social_link in resp.content for social_link in social_links]

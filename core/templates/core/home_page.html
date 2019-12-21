@@ -14,7 +14,7 @@
                 <h3 class="post-card-title">{{ article.article_title }}</h3>
               </header>
               <div class="post-card-content text-muted">
-                October 30, 2019 <span class="reading-time">5</span> <span class="min-read">Min Read</span>
+                {{ article.created_at|date:'F j, Y' }}<span class="reading-time">5</span> <span class="min-read">Min Read</span>
               </div>
               <footer class="post-card-footer">
                 <small class="text-muted">Last updated 3 mins ago</small>
