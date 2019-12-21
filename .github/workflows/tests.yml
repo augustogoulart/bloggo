@@ -46,14 +46,14 @@ jobs:
       run: |
         cp contrib/.env-sample .env
 
-    - name: Migrate database
+    - name: Migrate testing database
       run: |
         pipenv run python manage.py migrate
       env:
         POSTGRES_HOST: 0.0.0.0
         POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
 
-    - name: Run application
+    - name: Run application for testing
       run: |
         pipenv run python manage.py collectstatic
         pipenv run python manage.py runserver &
