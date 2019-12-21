@@ -29,6 +29,7 @@ jobs:
     steps:
 
     - uses: actions/checkout@v1
+    - uses: actions/heroku@1.0.0
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
@@ -59,7 +60,7 @@ jobs:
       env:
         POSTGRES_HOST: 0.0.0.0
         POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
-        
+
     - name: Run test suite
       run: |
         pipenv run pytest
@@ -70,3 +71,12 @@ jobs:
         HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
       if: github.ref == 'refs/heads/master' && job.status == 'success'
       run: git push -f https://heroku:$HEROKU_AUTH_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
+
+    - name: Migrate Database
+      uses: actions/heroku@master
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_AUTH_TOKEN }}
+      with:
+        args: container:login && heroku run python manage.py migrate --app augustogoulart
+
+
