@@ -8,3 +8,9 @@ from datetime import datetime
 def test_create_at():
     article_page = ArticlePage(created_at=timezone.now())
     assert type(article_page.created_at) is datetime
+
+
+@pytest.mark.django_db()
+def test_create_at():
+    article_page = ArticlePage(updated_at=timezone.now())
+    assert type(article_page.updated_at) is datetime

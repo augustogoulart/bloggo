@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags %}
+{% load humanize %}
 
 {% block content %}
 
@@ -15,7 +16,7 @@
         <div class="text-muted">
           {{ self.created_at|date:'F j, Y' }}<span class="reading-time">5</span> <span class="min-read">Min Read</span>
         </div>
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">Last updated {{ self.updated_at|naturaltime }}</small>
       </div>
 
     </div>

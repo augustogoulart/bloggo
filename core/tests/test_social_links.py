@@ -1,7 +1,5 @@
 import pytest
-from ..models import ArticlePage
-from django.utils import timezone
-from datetime import datetime
+
 
 @pytest.mark.django_db()
 def test_page_has_social_links(client):

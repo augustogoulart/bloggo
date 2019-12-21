@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags wagtailimages_tags %}
+{% load humanize %}
 
 {% load static %}
 
@@ -16,9 +17,6 @@
               <div class="post-card-content text-muted">
                 {{ article.created_at|date:'F j, Y' }}<span class="reading-time">5</span> <span class="min-read">Min Read</span>
               </div>
-              <footer class="post-card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </footer>
             </a>
           </article>
         </div>

@@ -43,6 +43,7 @@ class ArticlePage(Page):
 
     article_title = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     content = StreamField(
         [
             ("richtext_editor", RichTextBlock())
