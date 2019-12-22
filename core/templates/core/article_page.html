@@ -26,9 +26,12 @@
         {% for block in page.content %}
           {% include_block block %}
         {% endfor %}
+        {% include "core/blocks/disqus.html" %}
+      </div>
+      <div class="col-md-10 col-sm-12 article-content">
+        {% include "core/blocks/disqus.html" %}
       </div>
     </div>
-  {% include "core/blocks/disqus.html" %}
   </div>
 
 {% endblock %}
