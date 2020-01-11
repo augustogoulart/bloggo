@@ -2,6 +2,11 @@
     border-radius: 15px;
 }
 
+.round-corner-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
 a, a:hover {
     text-decoration: none;
     outline: 0;
@@ -86,4 +91,13 @@ input[type="search"], textarea {
 
 .card-article {
     margin-bottom: 2vh;
+}
+
+.card-img-top {
+    max-height: 25vh;
+}
+
+.background-gradient {
+    background: rgb(73,5,135);
+background: linear-gradient(90deg, rgba(73,5,135,1) 8%, rgb(122, 71, 171) 80%);
 }
