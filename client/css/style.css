@@ -77,3 +77,13 @@ input[type="search"], textarea {
 .card {
     border: 1px solid #f0f8ff;
 }
+
+@media (min-width: 1300px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+.card-article {
+    margin-bottom: 2vh;
+}
