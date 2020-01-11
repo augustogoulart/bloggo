@@ -46,8 +46,8 @@ input[type="search"], textarea {
 
 .avatar {
     border-radius: 50%;
-    height: 3.75rem;
-    width: 3.75rem;
+    height: 10rem;
+    width: 10rem;
     border: 1px solid rgba(52, 152, 219, 0.57);
 }
 
@@ -99,5 +99,16 @@ input[type="search"], textarea {
 
 .background-gradient {
     background: rgb(73,5,135);
-background: linear-gradient(90deg, rgba(73,5,135,1) 8%, rgb(122, 71, 171) 80%);
+    background: linear-gradient(90deg, rgba(73,5,135,1) 8%, rgb(122, 71, 171) 80%);
 }
+
+header {
+    height: 600px;
+    width: 100vw;
+    background: linear-gradient(#eba2cf, #d18489);
+}
+
+img {
+   object-fit: cover;
+}
+

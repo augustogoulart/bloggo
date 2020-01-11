@@ -26,9 +26,8 @@
 
 <body class="{% block body_class %}{% endblock %}">
 {% wagtailuserbar %}
-
+{% include "core/blocks/navbar.html" %}
 <main class="container main">
-  {% include "core/blocks/navbar.html" %}
   <section>
     {% block content %}{% endblock %}
   </section>
