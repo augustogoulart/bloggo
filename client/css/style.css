@@ -109,7 +109,7 @@ input[type="search"], textarea {
 }
 
 .card-img-top {
-    max-height: 25vh;
+    max-height: 50vh;
 }
 
 .background-gradient {
@@ -129,3 +129,6 @@ img {
    object-fit: cover;
 }
 
+.row-header {
+    min-height: 50vh;
+}
