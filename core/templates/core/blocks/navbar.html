@@ -1,26 +1,36 @@
 {% load static %}
-<header class="jumbotron">
-{#  <img src="https://isometric.online/wp-content/uploads/2019/07/Web_design_SVG.svg" alt="">#}
-  <div class="container">
-    <nav class="navbar">
-      <h1 title="Augusto Goulart" class="">
-        <a href="" class="navbar-brand">
-          Augusto Goulart
-        </a>
-      </h1>
-      <div class="d-flex">
-        <div class="p-4 "><a href="">Stories</a></div>
-        <div class="p-4 "><a href="">Tutorials</a></div>
-        <div class="p-4 "><a href="">About</a></div>
-        <div class="p-4 " style="border: 1px solid black; border-radius: 40px;"><a href="">Subscribe</a></div>
-      </div>
-    </nav>
-    <div class="">
-      <img src="{% static 'avatar.jpeg' %}" alt="" class="avatar">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
+<header class="nav-header background-gradient">
+  <nav class="navbar">
+    <h1 title="Augusto Goulart" class="">
+      <a href="" class="navbar-brand">
+        Augusto Goulart
+      </a>
+    </h1>
+    <div class="d-flex">
+      <div class="p-4 "><a href="">Stories</a></div>
+      <div class="p-4 "><a href="">Tutorials</a></div>
+      <div class="p-4 "><a href="">About</a></div>
+      <div class="p-4 " style="border: 1px solid black; border-radius: 40px;"><a href="">Subscribe</a></div>
     </div>
-  </div>
+  </nav>
+
+    <div class="container">
+      <div class="row">
+       <div class="col-md-6">
+          <div class="avatar-place">
+          <img src="{% static 'avatar.jpeg' %}" alt="" class="avatar">
+        </div>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+
+        <div class="col-md-6">
+          <img src="https://isometric.online/wp-content/uploads/2019/08/Science_SVG.svg" class="card-img-top" alt="">
+        </div>
+
+        </div>
+    </div>
+
+
 </header>

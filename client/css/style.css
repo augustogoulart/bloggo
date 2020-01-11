@@ -48,8 +48,15 @@ input[type="search"], textarea {
     border-radius: 50%;
     height: 10rem;
     width: 10rem;
-    border: 1px solid rgba(52, 152, 219, 0.57);
+    border: 10px solid rgba(52, 152, 219, 0.57);
 }
+
+/*.avatar-place {*/
+    /*border-radius: 50%;*/
+    /*height: 12rem;*/
+    /*width: 12rem;*/
+    /*background-color: rgba(35, 219, 31, 0.57);*/
+/*}*/
 
 .text-muted {
     color: #666666;
@@ -76,11 +83,19 @@ input[type="search"], textarea {
 
 /*New UI*/
 .navbar {
-   height: 16vh;
+   height: 12vh;
+    padding-left: 64px;
+    padding-right: 64px;
 }
 
 .card {
     border: 1px solid #f0f8ff;
+}
+
+@media (min-width: 1300px) {
+    .container {
+        max-width: 1300px;
+    }
 }
 
 @media (min-width: 1300px) {
@@ -98,14 +113,16 @@ input[type="search"], textarea {
 }
 
 .background-gradient {
-    background: rgb(73,5,135);
-    background: linear-gradient(90deg, rgba(73,5,135,1) 8%, rgb(122, 71, 171) 80%);
+  background: rgb(73,5,135);
+background: linear-gradient(90deg, rgba(73,5,135,1) 36%, rgba(144,80,201,1) 99%);
 }
 
-header {
+.nav-header {
     height: 600px;
     width: 100vw;
-    background: linear-gradient(#eba2cf, #d18489);
+ background: rgb(73,5,135);
+ background: linear-gradient(90deg, rgba(73,5,135,1) 36%, rgb(110, 58, 150) 99%);
+    margin-bottom: 5vh;
 }
 
 img {
