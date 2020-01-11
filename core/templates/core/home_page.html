@@ -6,21 +6,33 @@
 
 {% block content %}
   <div class="container">
+    <div class="row">
       {% for article in articles %}
-        <div class="row justify-content-md-center">
-        <div class="col-12">
-          <article class="post-card">
+        <div class="col-md-6 ">
             <a href="{{ article.url }}" class="post-card-link">
-              <header class="post-card-header">
-                <h3 class="post-card-title">{{ article.article_title }}</h3>
-              </header>
-              <div class="post-card-content text-muted">
-                {{ article.created_at|date:'F j, Y' }}<span class="reading-time">5</span> <span class="min-read">Min Read</span>
+              <div class="card mb-3 round-corner" >
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1542393545-10f5cde2c810" class="card-img round-corner" alt="">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="post-card-title">{{ article.article_title }}</h5>
+                      <p class="post-card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                      <p class="card-text">
+                        <small class="text-muted">{{ article.created_at|naturaltime }}
+                          <span>•</span>
+                          <span>5 min Read</span>
+                        </small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </a>
-          </article>
-        </div>
         </div>
       {% endfor %}
+    </div>
   </div>
 {% endblock content %}
