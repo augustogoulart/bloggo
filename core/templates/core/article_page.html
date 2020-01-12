@@ -11,14 +11,13 @@
         <h1 class="display-6 article-title">{{ self.article_title }}</h1>
       </div>
 
-
       <div class="col-12 text-center">
         <div class="text-muted">
-          {{ self.created_at|date:'F j, Y' }}<span class="reading-time">5</span> <span class="min-read">Min Read</span>
+          {{ self.created_at|naturaltime }}
+          <span>•</span>
+          <span>5 min Read</span>
         </div>
-        <small class="text-muted">Last updated {{ self.updated_at|naturaltime }}</small>
       </div>
-
     </div>
 
     <div class="row justify-content-md-center">
@@ -26,9 +25,7 @@
         {% for block in page.content %}
           {% include_block block %}
         {% endfor %}
-        {% include "core/blocks/disqus.html" %}
-      </div>
-      <div class="col-md-10 col-sm-12 article-content">
+        <small class="text-muted">Article updated {{ self.updated_at|naturaltime }}.</small>
         {% include "core/blocks/disqus.html" %}
       </div>
     </div>

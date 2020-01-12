@@ -5,22 +5,26 @@
 {% load static %}
 
 {% block content %}
-  <div class="container article-list">
+  <div class="container">
+    <div class="row">
       {% for article in articles %}
-        <div class="row justify-content-md-center">
-        <div class="col-12">
-          <article class="post-card">
-            <a href="{{ article.url }}" class="post-card-link">
-              <header class="post-card-header">
-                <h3 class="post-card-title">{{ article.article_title }}</h3>
-              </header>
-              <div class="post-card-content text-muted">
-                {{ article.created_at|date:'F j, Y' }}<span class="reading-time">5</span> <span class="min-read">Min Read</span>
+        <div class="col-md-4 col-sm-12 card-article">
+          <a href="{{ article.url }}" class="post-card-link">
+            <div class="card mb-3 round-corner">
+              <div class="round-corner-top background-gradient">
+              <img src="https://isometric.online/wp-content/uploads/2019/08/Science_SVG.svg" class="card-img-top"
+                   alt="">
+                </div>
+              <div class="card-body">
+                <h5 class="post-card-title">{{ article.article_title }}</h5>
+                <p class="post-card-text">This is a wider card with supporting text below as a natural lead-in to
+                  additional content. This content is a little bit longer.</p>
+                <small class="card-bottom">{{ article.created_at|naturaltime }} • 5 min Read</small>
               </div>
-            </a>
-          </article>
-        </div>
+            </div>
+          </a>
         </div>
       {% endfor %}
+    </div>
   </div>
 {% endblock content %}
