@@ -84,25 +84,18 @@ input[type="search"], textarea {
 .navbar {
    /*height: 12vh;*/
     height: 4vh;
-    padding-left: 64px;
-    padding-right: 64px;
 }
 
 .card {
     border: 1px solid #f0f8ff;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1400px) {
     .container {
-        max-width: 1300px;
+        max-width: 1380px;
     }
 }
 
-@media (min-width: 1300px) {
-    .container {
-        max-width: 1300px;
-    }
-}
 
 .card-article {
     margin-bottom: 2vh;
@@ -129,16 +122,6 @@ background: linear-gradient(90deg, rgba(73,5,135,1) 36%, rgba(144,80,201,1) 99%)
 
 .nav-header {
     height: 10vh;
-    width: 100vw;
- background: rgb(73,5,135);
- background: linear-gradient(90deg, rgba(73,5,135,1) 36%, rgb(110, 58, 150) 99%);
     margin-bottom: 5vh;
-}
-
-img {
-   object-fit: cover;
-}
-
-.row-header {
-    min-height: 50vh;
+    margin-top: 5vh;
 }
