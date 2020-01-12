@@ -16,11 +16,11 @@ a, a:hover {
 
 
 .post-card-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin: 0 0 10px 0;
     color: #1f1f1f;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .post-card-content {
@@ -70,7 +70,7 @@ input[type="search"], textarea {
 }
 
 .article-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .article-content {
@@ -108,8 +108,12 @@ input[type="search"], textarea {
     margin-bottom: 2vh;
 }
 
+.card-body {
+    min-height: 25vh;
+}
+
 .card-img-top {
-    max-height: 50vh;
+    max-height: 30vh;
 }
 
 .background-gradient {
