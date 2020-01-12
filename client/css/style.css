@@ -16,7 +16,7 @@ a, a:hover {
 
 
 .post-card-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin: 0 0 10px 0;
     color: #1f1f1f;
@@ -29,7 +29,7 @@ a, a:hover {
 
 .post-card-text {
     color: #666666;
-    font-size: 16px;
+    font-size: 1.1rem;
     line-height: 22px;
     font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif
 }
@@ -58,8 +58,8 @@ input[type="search"], textarea {
     /*background-color: rgba(35, 219, 31, 0.57);*/
 /*}*/
 
-.text-muted {
-    color: #666666;
+.card-bottom {
+    color: #a7a7a7;
     font-size: 16px;
     line-height: 22px;
     font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif
