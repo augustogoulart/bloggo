@@ -124,4 +124,10 @@ background: linear-gradient(90deg, rgba(73,5,135,1) 36%, rgba(144,80,201,1) 99%)
     height: 10vh;
     margin-bottom: 5vh;
     margin-top: 5vh;
+    vertical-align: top;
+}
+
+.nav-item {
+    padding: 1rem;
+    margin-left: 1rem;
 }
