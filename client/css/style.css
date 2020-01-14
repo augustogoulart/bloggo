@@ -107,10 +107,10 @@ input[type="search"], textarea {
 }
 
 .nav-header {
-    height: 10vh;
-    margin-bottom: 8vh;
-    margin-top: 2vh;
-    vertical-align: top;
+    /*height: 10vh;*/
+    margin-bottom: 12vh;
+    margin-top: 6vh;
+    /*vertical-align: top;*/
 }
 
 .nav-item {
