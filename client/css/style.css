@@ -1,10 +1,10 @@
 .round-corner {
-    border-radius: 15px;
+    border-radius: 0.5rem;
 }
 
 .round-corner-top {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 
 a, a:hover {
@@ -42,20 +42,6 @@ input[type="search"], textarea {
 .form-control::-webkit-input-placeholder {
     color: #bbb;
 }
-
-.avatar {
-    border-radius: 50%;
-    height: 10rem;
-    width: 10rem;
-    border: 10px solid rgba(52, 152, 219, 0.57);
-}
-
-/*.avatar-place {*/
-    /*border-radius: 50%;*/
-    /*height: 12rem;*/
-    /*width: 12rem;*/
-    /*background-color: rgba(35, 219, 31, 0.57);*/
-/*}*/
 
 .card-bottom {
     color: #a7a7a7;
@@ -132,6 +118,11 @@ input[type="search"], textarea {
     margin-left: 1rem;
 }
 
+.nav-item-subscribe {
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
 /* Brand */
 .name-logo {
     font-family: 'Poppins', sans-serif;
@@ -146,3 +137,4 @@ input[type="search"], textarea {
     font-weight: 500;
     font-size: 1.7rem;
 }
+
