@@ -129,7 +129,6 @@ input[type="search"], textarea {
 }
 
 .social-links {
-    color: #808080;
     font-size: 1.25rem;
     display: flex;
     flex-wrap: wrap;
@@ -146,4 +145,5 @@ input[type="search"], textarea {
 
 .fab, .fas {
     margin-right: 1rem;
+    color: #454545;;
 }
