@@ -116,14 +116,14 @@ input[type="search"], textarea {
 }
 
 .background-gradient {
-  background: rgb(73,5,135);
-background: linear-gradient(90deg, rgba(73,5,135,1) 36%, rgba(144,80,201,1) 99%);
+    background: rgb(73,5,135);
+    background: linear-gradient(90deg, rgba(73,5,135,1) 36%, rgba(144,80,201,1) 99%);
 }
 
 .nav-header {
     height: 10vh;
-    margin-bottom: 5vh;
-    margin-top: 5vh;
+    margin-bottom: 8vh;
+    margin-top: 2vh;
     vertical-align: top;
 }
 
@@ -137,12 +137,12 @@ background: linear-gradient(90deg, rgba(73,5,135,1) 36%, rgba(144,80,201,1) 99%)
     font-family: 'Poppins', sans-serif;
     color: #0f0f0f;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .surname-logo {
     font-family: 'Poppins', sans-serif;
     color: #b4b4b4;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 }
