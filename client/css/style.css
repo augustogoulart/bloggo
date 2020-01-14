@@ -66,12 +66,6 @@ input[type="search"], textarea {
     letter-spacing: 0.069rem;
 }
 
-/*New UI*/
-.navbar {
-   /*height: 12vh;*/
-    height: 4vh;
-}
-
 .card {
     border: 1px solid #f0f8ff;
 }
@@ -107,10 +101,8 @@ input[type="search"], textarea {
 }
 
 .nav-header {
-    /*height: 10vh;*/
-    margin-bottom: 12vh;
-    margin-top: 6vh;
-    /*vertical-align: top;*/
+    margin-bottom: 8vh;
+    margin-top: 3vh;
 }
 
 .nav-item {
