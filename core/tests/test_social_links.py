@@ -1,7 +1,6 @@
 import pytest
 
 
-@pytest.mark.skip(reason="no way of currently testing this")
 @pytest.mark.django_db()
 def test_page_has_social_links(client):
     social_links = [
