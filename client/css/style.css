@@ -147,3 +147,7 @@ input[type="search"], textarea {
     margin-right: 1rem;
     color: #454545;;
 }
+
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
