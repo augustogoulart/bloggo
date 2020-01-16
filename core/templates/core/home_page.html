@@ -5,26 +5,24 @@
 {% load static %}
 
 {% block content %}
-  <div class="container">
-    <div class="row">
-      {% for article in articles %}
-        <div class="col-md-4 col-sm-12 card-article">
-          <a href="{{ article.url }}" class="post-card-link">
-            <div class="card mb-3 round-corner">
-              <div class="round-corner-top background-gradient">
-              <img src="https://isometric.online/wp-content/uploads/2019/08/Science_SVG.svg" class="card-img-top"
-                   alt="">
-                </div>
-              <div class="card-body">
-                <h5 class="post-card-title">{{ article.article_title }}</h5>
-                <p class="post-card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.</p>
-                <small class="card-bottom">{{ article.created_at|naturaltime }} • 5 min Read</small>
+  <div class="row">
+    {% for article in articles %}
+      <div class="col-md-4 col-sm-12">
+        <a href="{{ article.url }}" class="post-card-link">
+          <div class="card mb-3 round-corner">
+            <div class="round-corner-top background-gradient">
+            <img src="https://isometric.online/wp-content/uploads/2019/08/Science_SVG.svg" class="card-img-top"
+                 alt="">
               </div>
+            <div class="card-body">
+              <h5 class="post-card-title">{{ article.article_title }}</h5>
+              <p class="post-card-text">This is a wider card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.</p>
+              <small class="card-bottom">{{ article.created_at|naturaltime }} • 5 min Read</small>
             </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
   </div>
 {% endblock content %}
