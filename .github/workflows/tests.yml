@@ -76,7 +76,7 @@ jobs:
       uses: actions/heroku@master
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_AUTH_TOKEN }}
-      with:
-        args: container:login && heroku run python manage.py migrate --app augustogoulart
-
-
+      if: github.ref == 'refs/heads/master' && job.status == 'success'
+      run: |
+        container:login
+        heroku run python manage.py migrate --app augustogoulart
