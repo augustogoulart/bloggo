@@ -32,41 +32,41 @@
 <main class="container">
   {% block content %}{% endblock %}
 
-  <div class="pt-4 my-md-5 pt-md-5 border-top">
-    <div class="row">
-      <div class="col-12 col-md">
-        <img class="mb-2" src="https://isometric.online/wp-content/uploads/2019/08/Science_SVG.svg" alt="" width="24"
-             height="24">
-        <small class="d-block mb-3 text-muted">&copy; 2017-2019</small>
-      </div>
-
-      <div class="col-6 col-md">
-        <h5>Subscribe</h5>
-        <form class="form-inline">
-          <div class="form-group mx-sm-3 mb-2">
-            <label for="inputPassword2" class="sr-only">Password</label>
-            <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
-        </form>
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 d-flex justify-content-center mb-4">
+          <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="inlineFormInputGroup">email</label>
+                <div class="input-group ">
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                </div>
+              </div>
+                <button type="submit" id="footerSubscribe" class="btn btn-item-subscribe">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6 d-flex justify-content-center">
+          <ul class="list-unstyled text-small">
+            <li><a class="footer-link" href="#">About</a></li>
+            <li><a class="footer-link" href="#">Contact</a></li>
+            <li><a class="footer-link" href="#">Social</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6 d-flex justify-content-center">
+          <ul class="list-unstyled text-small">
+            <li><a class="footer-link" href="#">Stories</a></li>
+            <li><a class="footer-link" href="#">Tutorials</a></li>
+            <li><a class="footer-link" href="#">Projects</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  </footer>
 
 </main>
-<footer class="footer">
-  <div class="footer-container">
-
-    <div class="logo">
-      <a href="">
-        <h2 title="Augusto Goulart"><span class="name-logo">
-      Augusto </span><span class="surname-logo">Goulart</span>
-        </h2>
-      </a>
-    </div>
-
-  </div>
-</footer>
 
 {# Global javascript #}
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
