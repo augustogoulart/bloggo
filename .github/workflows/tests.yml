@@ -72,13 +72,11 @@ jobs:
       if: github.ref == 'refs/heads/master' && job.status == 'success'
       run: git push -f https://heroku:$HEROKU_AUTH_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
 
-    - name: Migrate Database
+    - name: Migrate Production Database
+      if: github.ref == 'refs/heads/master' && job.status == 'success'
       uses: actions/heroku@master
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_AUTH_TOKEN }}
-        HEROKU_AUTH_TOKEN: ${{ secrets.HEROKU_AUTH_TOKEN }}
-        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
-      if: github.ref == 'refs/heads/master' && job.status == 'success'
-      run: |
-        container:login
-        heroku run python manage.py migrate --app augustogoulart
+      with:
+        args: container:login && heroku run python manage.py migrate --app augustogoulart
+
