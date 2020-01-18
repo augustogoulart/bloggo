@@ -31,11 +31,44 @@
 
 <main class="container">
   {% block content %}{% endblock %}
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 d-flex justify-content-center mb-4">
+          <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="inlineFormInputGroup">email</label>
+                <div class="input-group ">
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                </div>
+              </div>
+                <button type="submit" id="footerSubscribe" class="btn btn-item-subscribe">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6 d-flex justify-content-center">
+          <ul class="list-unstyled text-small">
+            <li><a class="footer-link" href="#">About</a></li>
+            <li><a class="footer-link" href="#">Contact</a></li>
+            <li><a class="footer-link" href="#">Social</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-6 col-6 d-flex justify-content-center">
+          <ul class="list-unstyled text-small">
+            <li><a class="footer-link" href="#">Stories</a></li>
+            <li><a class="footer-link" href="#">Tutorials</a></li>
+            <li><a class="footer-link" href="#">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </main>
 
 {# Global javascript #}
-
-
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
