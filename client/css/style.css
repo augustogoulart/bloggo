@@ -104,6 +104,7 @@ input[type="search"], textarea {
 .btn-item-subscribe {
     border-radius: 0.5rem;
     border: 2px solid #383838;
+    text-align: center;
 }
 
 #footerSubscribe:hover, #subscribe:hover {
