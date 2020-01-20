@@ -192,3 +192,11 @@ body {
     font-size: 1rem;
     font-weight: 500;
 }
+
+.subscribe-footer-input {
+    padding-right: 0!important;
+}
+
+.btn-footer-subscribe{
+    background-color: #ffffff;
+}
