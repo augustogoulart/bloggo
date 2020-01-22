@@ -200,3 +200,12 @@ body {
 .btn-footer-subscribe{
     background-color: #ffffff;
 }
+
+.author-avatar{
+    border-radius: 50%;
+}
+
+.author-card {
+    padding: 2rem;
+    margin: 3rem 0;
+}

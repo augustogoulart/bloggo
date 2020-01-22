@@ -26,6 +26,20 @@
           {% include_block block %}
         {% endfor %}
         <small class="text-muted">Article updated {{ self.updated_at|naturaltime }}.</small>
+
+        <div class="card author-card">
+            <div class="row">
+              <div class="col-md-2 text-center">
+                <img src="https://avatars2.githubusercontent.com/u/13952931?s=460&v=4" alt="Author's avatar"
+                     class="img-fluid author-avatar">
+              </div>
+              <div class="col-md-10 mt-5 mt-md-1">
+                <h5 class="card-title">Augusto Goulart</h5>
+                <p class="card-text">Some nice things about me and a positive message lol</p>
+              </div>
+            </div>
+        </div>
+
         {% include "core/blocks/disqus.html" %}
       </div>
     </div>
