@@ -10,7 +10,7 @@
 a, a:hover {
     text-decoration: none;
     outline: 0;
-    transition: .2s;
+    transition: .5s;
 }
 
 .post-card-title {
@@ -105,6 +105,8 @@ input[type="search"], textarea {
     border-radius: 0.5rem;
     border: 2px solid #383838;
     text-align: center;
+
+
 }
 
 #footerSubscribe:hover, #subscribe:hover {
@@ -150,18 +152,16 @@ input[type="search"], textarea {
   display: block!important;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link, .nav-link:hover {
     color: #0f0f0f;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #787878;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
+.link-redirect:hover {
+    color: #797979 !important;
+    transition: 0.2s;
 }
 
 /* Sticky footer styles
@@ -200,18 +200,11 @@ body {
     font-weight: 500;
 }
 
-.footer-link:hover {
-    color: #787878;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: none;
-}
-
 .subscribe-footer-input {
     padding-right: 0!important;
 }
 
 .btn-footer-subscribe{
     background-color: #ffffff;
+    transition: 0.5s;
 }
