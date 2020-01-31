@@ -10,7 +10,7 @@
 a, a:hover {
     text-decoration: none;
     outline: 0;
-    transition: .5s;
+    transition: .2s;
 }
 
 .post-card-title {
@@ -157,6 +157,13 @@ input[type="search"], textarea {
     font-weight: 500;
 }
 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #787878;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -187,10 +194,18 @@ body {
 }
 
 .footer-link {
-    color: #5e5e5e;
+    color: #0f0f0f;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
+}
+
+.footer-link:hover {
+    color: #787878;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .subscribe-footer-input {
