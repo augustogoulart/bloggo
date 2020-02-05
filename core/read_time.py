@@ -8,4 +8,4 @@ def read_time(words):
 
     reading_time = number_of_words / words_per_minute
 
-    return reading_time
+    return round(reading_time)
