@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'debug_toolbar',
+    'wagtailcodeblock',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -189,3 +190,17 @@ STATICFILES_STORAGE = config('STATICFILES_STORAGE')
 
 # Redirect HTTP to HTTPS
 SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=False, cast=bool)
+
+WAGTAIL_CODE_BLOCK_LANGUAGES = (
+    ('bash', 'Bash/Shell'),
+    ('css', 'CSS'),
+    ('diff', 'diff'),
+    ('html', 'HTML'),
+    ('javascript', 'Javascript'),
+    ('json', 'JSON'),
+    ('python', 'Python'),
+    ('scss', 'SCSS'),
+    ('yaml', 'YAML'),
+)
+
+WAGTAIL_CODE_BLOCK_THEME = 'okaidia'
