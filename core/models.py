@@ -2,7 +2,7 @@ from django.db import models
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
-from .blocks import RichTextBlock
+from .blocks import RichTextBlock, CodeStreamBlock
 
 
 class HomePage(Page):
@@ -31,9 +31,11 @@ class ArticlePage(Page):
     article_title = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
     content = StreamField(
         [
-            ("richtext_editor", RichTextBlock())
+            ("richtext_editor", RichTextBlock()),
+            ("code_block", CodeStreamBlock())
         ],
         null=True,
         blank=True
@@ -41,7 +43,7 @@ class ArticlePage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel("article_title"),
-        StreamFieldPanel("content")
+        StreamFieldPanel("content"),
     ]
 
     class Meta:

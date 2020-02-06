@@ -17,6 +17,7 @@ wagtail = "*"
 pytest = "*"
 dj-static = "*"
 pytest-django = "*"
+wagtailcodeblock = "*"
 
 [requires]
 python_version = "3.7"
