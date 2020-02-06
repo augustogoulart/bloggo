@@ -6,26 +6,13 @@ from .blocks import RichTextBlock
 
 
 class HomePage(Page):
-    """
-    Home page model
-    """
 
-    # Limits the number of core page instances
-    max_count = 1
-
-    banner_title = models.CharField(max_length=256, blank=False, null=True)
-
-    content_panels = Page.content_panels + [
-        FieldPanel("banner_title"),
-    ]
+    max_count = 1   # Limits the number of core page instances
 
     def get_context(self, request, *args, **kwargs):
         """
         Adds published live articles to the Home page
 
-        :param request:
-        :param args:
-        :param kwargs:
         :return: default context plus list of articles
         """
         context = super().get_context(request, *args, **kwargs)
