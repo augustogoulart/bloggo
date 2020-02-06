@@ -13,9 +13,9 @@
 
       <div class="col-12 text-center">
         <div class="text-muted">
-          {{ self.created_at|naturaltime }}
-          <span>•</span>
-          <span>5 min Read</span>
+          {{ self.created_at|date:"M d, Y" }}
+{#          <span>•</span>#}
+{#          <span>5 min Read</span>#}
         </div>
       </div>
     </div>
