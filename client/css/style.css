@@ -208,3 +208,7 @@ body {
     background-color: #ffffff;
     transition: 0.5s;
 }
+
+pre[class*=language-] {
+    font-size: 0.75em !important;
+}
