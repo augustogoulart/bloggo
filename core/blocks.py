@@ -18,3 +18,4 @@ class CodeStreamBlock(StreamBlock):
     Test StreamBlock with a CodeBlock.
     """
     code = CodeBlock()
+
