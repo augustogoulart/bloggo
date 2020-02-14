@@ -52,3 +52,27 @@ class ArticlePage(Page):
         verbose_name = 'Article'
         verbose_name_plural = 'Articles'
 
+
+class FlexPage(Page):
+    """
+    Generic page - mostly static information
+    """
+    page_title = models.CharField(max_length=255)
+
+    content = StreamField(
+        [
+            ("richtext_editor", RichTextBlock()),
+            ("code_block", CodeStreamBlock())
+        ],
+        null=True,
+        blank=True
+    )
+
+    content_panels = Page.content_panels + [
+        FieldPanel("page_title"),
+        StreamFieldPanel("content")
+    ]
+
+    class Meta:
+        verbose_name = "Flex Page"
+        verbose_name_plural = "Flex Pages"
