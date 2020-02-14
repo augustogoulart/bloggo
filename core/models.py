@@ -43,7 +43,6 @@ class ArticlePage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel("article_title"),
-        FieldPanel("is_article"),
         StreamFieldPanel("content"),
     ]
 
@@ -75,3 +74,55 @@ class FlexPage(Page):
     class Meta:
         verbose_name = "Flex Page"
         verbose_name_plural = "Flex Pages"
+
+
+class TutorialPage(ArticlePage):
+    """
+    Multi-part tutorial page
+    """
+    class Meta:
+        verbose_name = "Tutorial"
+        verbose_name_plural = "Tutorials"
+
+
+class TutorialPageList(Page):
+    max_count = 1  # Limits the number of core page instances
+
+    def get_context(self, request, *args, **kwargs):
+        """
+        Lists published live tutorials
+
+        :return: default context plus list of tutorials
+        """
+        context = super().get_context(request, *args, **kwargs)
+        context['tutorials'] = TutorialPage.objects.live().public()
+        return context
+
+    class Meta:
+        verbose_name = "Tutorials List"
+
+
+class StoryPage(ArticlePage):
+    """
+    Single story page
+    """
+    class Meta:
+        verbose_name = "Story"
+        verbose_name_plural = "Stories"
+
+
+class StoryPageList(Page):
+    max_count = 1  # Limits the number of core page instances
+
+    def get_context(self, request, *args, **kwargs):
+        """
+        Lists published live stories
+
+        :return: default context plus list of stories
+        """
+        context = super().get_context(request, *args, **kwargs)
+        context['stories'] = StoryPage.objects.live().public()
+        return context
+
+    class Meta:
+        verbose_name = "Stories List"
