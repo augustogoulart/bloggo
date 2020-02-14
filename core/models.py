@@ -16,7 +16,7 @@ class HomePage(Page):
         :return: default context plus list of articles
         """
         context = super().get_context(request, *args, **kwargs)
-        context['articles'] = ArticlePage.objects.live().public().filter(is_article=True)
+        context['articles'] = ArticlePage.objects.live().public()
         return context
 
     class Meta:
@@ -31,7 +31,6 @@ class ArticlePage(Page):
     article_title = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    is_article = models.BooleanField(default=True)
 
     content = StreamField(
         [
