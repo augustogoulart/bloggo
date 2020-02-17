@@ -10,8 +10,9 @@
         <a href="{{ article.url }}" class="post-card-link">
           <div class="card mb-3 round-corner">
             <div class="round-corner-top background-gradient">
-            <img src="https://isometric.online/wp-content/uploads/2019/08/Science_SVG.svg" class="card-img-top"
-                 alt="">
+{#            <img src="https://isometric.online/wp-content/uploads/2019/08/Science_SVG.svg" class="card-img-top"#}
+{#                 alt="">#}
+              {% image item.image fill-320x240 %}
               </div>
             <div class="card-body">
               <h5 class="post-card-title">{{ article.article_title }}</h5>
