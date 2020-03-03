@@ -3,14 +3,18 @@
 
 {% load static %}
 
+
 {% block content %}
+
   <div class="row">
     {% for article in articles %}
+      {% image article.cover original as cover %}
       <div class="col-md-4 col-sm-12">
         <a href="{{ article.url }}" class="post-card-link">
           <div class="card mb-3 round-corner">
             <div class="round-corner-top background-gradient">
-            <img src="https://isometric.online/wp-content/uploads/2019/08/Science_SVG.svg" class="card-img-top"
+
+            <img src="{{ cover.url }}" class="card-img-top"
                  alt="">
               </div>
             <div class="card-body">
