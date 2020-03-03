@@ -35,6 +35,7 @@ class ArticlePage(Page):
     cover = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+', null=True
     )
+    cover_caption = models.CharField(max_length=255, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
