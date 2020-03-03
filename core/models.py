@@ -51,6 +51,7 @@ class ArticlePage(Page):
     content_panels = Page.content_panels + [
         FieldPanel("article_title"),
         ImageChooserPanel("cover"),
+        FieldPanel("cover_caption"),
         StreamFieldPanel("content")
     ]
 
