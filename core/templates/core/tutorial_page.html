@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
 {% load humanize %}
 
 {% block content %}
+  {% image self.cover original as cover %}
 
   <div class="container article-content">
     <div class="row justify-content-md-center">
@@ -18,6 +21,14 @@
 {#          <span>5 min Read</span>#}
         </div>
       </div>
+
+      <div class="col-8 text-center">
+        <img src="{{ cover.url }}" class="img-fluid" alt="">
+        <div class="text-muted text">
+          {{ self.cover_caption }}
+        </div>
+      </div>
+
     </div>
 
     <div class="row justify-content-md-center">
