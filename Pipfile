@@ -15,9 +15,10 @@ django-debug-toolbar = "*"
 python-decouple = '*'
 wagtail = "*"
 pytest = "*"
-dj-static = "*"
 pytest-django = "*"
 wagtailcodeblock = "*"
+boto3 = "*"
+django-storages = "*"
 
 [requires]
 python_version = "3.7"
