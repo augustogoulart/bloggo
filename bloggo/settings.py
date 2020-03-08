@@ -160,7 +160,8 @@ STATICFILES_FINDERS = [
 ]
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'client')
+    os.path.join(BASE_DIR, 'client'),
+    os.path.join(BASE_DIR, 'dist')
 ]
 
 # ManifestStaticFilesStorage is recommended in production, to prevent outdated

@@ -1,0 +1,21 @@
+{
+  "name": "bloggo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:augustogoulart/bloggo.git",
+  "author": "Augusto <augusto@goulart.me>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel core/templates/base.html"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.2"
+  }
+}
