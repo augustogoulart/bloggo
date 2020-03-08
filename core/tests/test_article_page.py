@@ -27,3 +27,4 @@ def test_article_can_have_a_cover_picture():
 def test_article_has_a_cover_caption():
     article_page_cover_caption = ArticlePage(cover_caption="Nice cover caption")
     assert article_page_cover_caption.cover_caption
+

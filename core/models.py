@@ -32,6 +32,7 @@ class ArticlePage(Page):
     """
 
     article_title = models.CharField(max_length=255)
+    headline = models.CharField(max_length=255)
     cover = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+', null=True
     )
@@ -50,9 +51,11 @@ class ArticlePage(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel("article_title"),
+        FieldPanel("headline"),
         ImageChooserPanel("cover"),
         FieldPanel("cover_caption"),
-        StreamFieldPanel("content")
+        StreamFieldPanel("content"),
+
     ]
 
     class Meta:
