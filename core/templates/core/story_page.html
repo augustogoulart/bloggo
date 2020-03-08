@@ -4,9 +4,17 @@
 
 {% load humanize %}
 
+{% block opengraph %}
+  {% image self.cover original as cover %}
+  <meta property="og:title" content="{{ self.article_title }}" />
+  <meta property="og:url" content="https://augusto.to/{{ self.slug }}/"/>
+  <meta property="og:image" content="{{ cover.url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{{ self.headline}}" />
+{% endblock opengraph%}
+
 {% block content %}
   {% image self.cover original as cover %}
-
   <div class="container article-content">
     <div class="row justify-content-md-center">
 
@@ -21,17 +29,18 @@
 {#          <span>5 min Read</span>#}
         </div>
       </div>
-      <div class="col-8 text-center">
+
+      <div class="text-center col-md-8">
         <img src="{{ cover.url }}" class="img-fluid" alt="">
         <div class="text-muted text">
           {{ self.cover_caption }}
         </div>
       </div>
-
     </div>
 
     <div class="row justify-content-md-center">
       <div class="col-md-8 col-sm-12 article-content">
+        {{ self.headline }}
         {% for block in page.content %}
           {% include_block block %}
         {% endfor %}
