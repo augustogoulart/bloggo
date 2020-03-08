@@ -6,7 +6,7 @@
 {% block content %}
   <div class="row">
     {% for story in stories %}
-      {% image story.cover original as cover %}
+      {% image story.cover width-450 format-webp as cover %}
       <div class="col-md-4 col-sm-12">
         <a href="{{ story.url }}" class="post-card-link">
           <div class="card mb-3 round-corner">

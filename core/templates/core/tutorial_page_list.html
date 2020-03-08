@@ -6,7 +6,7 @@
 {% block content %}
   <div class="row">
     {% for tutorial in tutorials %}
-      {% image tutorial.cover original as cover %}
+      {% image tutorial.cover width-450 format-webp as cover %}
       <div class="col-md-4 col-sm-12">
         <a href="{{ tutorial.url }}" class="post-card-link">
           <div class="card mb-3 round-corner">
