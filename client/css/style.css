@@ -61,8 +61,7 @@ input[type="search"], textarea {
     font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.25rem;
     font-weight: 300;
-    line-height: 1.7;
-    letter-spacing: 0.069rem;
+    letter-spacing: 0.1rem;
 }
 
 .card {
@@ -101,8 +100,6 @@ input[type="search"], textarea {
     border-radius: 0.5rem;
     border: 2px solid #383838;
     text-align: center;
-
-
 }
 
 /* Brand */
@@ -172,8 +169,6 @@ body {
   line-height: 75px; /* Vertically center the text there */
   background: rgb(238, 238, 238);
 }
-
-
 
 pre[class*=language-] {
     font-size: 0.75em !important;
