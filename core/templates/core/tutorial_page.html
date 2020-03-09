@@ -18,8 +18,12 @@
   <div class="container article-content">
     <div class="row justify-content-md-center">
 
+
       <div class="col-12 text-center">
         <h1 class="display-6 article-title">{{ self.article_title }}</h1>
+        <p>
+          {{ self.headline }}
+        </p>
       </div>
 
       <div class="col-12 text-center">
@@ -30,17 +34,18 @@
         </div>
       </div>
 
-      <div class="text-center col-md-8">
+      <div class="text-center col-md-8 mt-5 mb-5 ">
         <img src="{{ cover.url }}" class="img-fluid" alt="">
         <div class="text-muted text">
           {{ self.cover_caption }}
         </div>
       </div>
+
     </div>
 
     <div class="row justify-content-md-center">
       <div class="col-md-8 col-sm-12  article-content">
-        {{ self.headline }}
+
         {% for block in page.content %}
           {% include_block block %}
         {% endfor %}

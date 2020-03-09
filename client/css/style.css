@@ -49,12 +49,12 @@ input[type="search"], textarea {
 }
 
 .article-content {
-    padding-top: 3rem;
     margin-bottom: 4rem;
 }
 
 .article-title {
     font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
 }
 
 .article-content {
