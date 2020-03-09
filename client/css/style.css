@@ -147,6 +147,12 @@ input[type="search"], textarea {
     font-weight: 500;
 }
 
+#subscribe:hover {
+    background-color: #383838;;
+    color: #ffffff;
+}
+
+
 .link-redirect:hover {
     color: #797979 !important;
     transition: 0.2s;
