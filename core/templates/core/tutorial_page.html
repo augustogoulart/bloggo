@@ -5,7 +5,7 @@
 {% load humanize %}
 
 {% block opengraph %}
-  {% image self.cover original as cover %}
+  {% image self.cover width-1024 as cover %}
   <meta property="og:title" content="{{ self.article_title }}" />
   <meta property="og:url" content="https://augusto.to/{{ self.slug }}/"/>
   <meta property="og:image" content="{{ cover.url }}" />
