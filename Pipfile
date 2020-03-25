@@ -16,9 +16,9 @@ python-decouple = '*'
 wagtail = "*"
 pytest = "*"
 pytest-django = "*"
-wagtailcodeblock = "*"
 boto3 = "*"
 django-storages = "*"
+wagtailcodeblock = {editable = true,git = "https://github.com/augustogoulart/wagtailcodeblock.git",ref = "master"}
 
 [requires]
 python_version = "3.7"
