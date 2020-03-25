@@ -202,7 +202,7 @@ WAGTAIL_CODE_BLOCK_THEME = 'okaidia'
 # Static file management
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)
-
+AWS_IS_GZIPPED = True
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY', default=None)
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME', default=None)
 
