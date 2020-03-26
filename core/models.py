@@ -30,7 +30,6 @@ class ArticlePage(Page):
     """
     Standard Article instance
     """
-
     article_title = models.CharField(max_length=255)
     headline = models.CharField(max_length=255)
     twitter_link = models.CharField(max_length=2048, default="")
@@ -130,6 +129,7 @@ class TutorialPageList(Page):
 
 
 class StoryPage(ArticlePage):
+    template = "core/tutorial_page.html"
     """
     Single story page
     """
