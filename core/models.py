@@ -33,6 +33,7 @@ class ArticlePage(Page):
 
     article_title = models.CharField(max_length=255)
     headline = models.CharField(max_length=255)
+    twitter_link = models.CharField(max_length=2048, default="")
     cover = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+', null=True
     )
@@ -54,6 +55,7 @@ class ArticlePage(Page):
         FieldPanel("headline"),
         ImageChooserPanel("cover"),
         FieldPanel("cover_caption"),
+        FieldPanel("twitter_link"),
         StreamFieldPanel("content"),
 
     ]
