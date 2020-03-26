@@ -9,12 +9,11 @@
   <div class="row">
     {% for article in articles %}
       {% image article.cover width-450 format-webp as cover %}
-      <div class="col-md-4 col-sm-12">
+      <div class="col-md-4 col-sm-12 post-card">
         <a href="{{ article.url }}" class="post-card-link">
-          <div class="card mb-3 round-corner">
-            <div class="round-corner-top">
-
-            <img src="{{ cover.url }}" class="card-img-top"
+          <div class="card mb-5 ml-1 mr-2 round-corner shadow">
+            <div>
+            <img src="{{ cover.url }}" class="card-img-top round-corner-top"
                  alt="">
               </div>
             <div class="card-body">
