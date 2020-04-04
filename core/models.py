@@ -26,6 +26,40 @@ class HomePage(Page):
         verbose_name = "Home Page"
 
 
+class TutorialPageList(Page):
+    max_count = 1  # Limits the number of core page instances
+
+    def get_context(self, request, *args, **kwargs):
+        """
+        Lists published live tutorials
+
+        :return: default context plus list of tutorials
+        """
+        context = super().get_context(request, *args, **kwargs)
+        context['tutorials'] = TutorialPage.objects.live().public()
+        return context
+
+    class Meta:
+        verbose_name = "Tutorials List"
+
+
+class StoryPageList(Page):
+    max_count = 1  # Limits the number of core page instances
+
+    def get_context(self, request, *args, **kwargs):
+        """
+        Lists published live stories
+
+        :return: default context plus list of stories
+        """
+        context = super().get_context(request, *args, **kwargs)
+        context['stories'] = StoryPage.objects.live().public()
+        return context
+
+    class Meta:
+        verbose_name = "Stories List"
+
+
 class ArticlePage(Page):
     """
     Standard Article instance
@@ -77,6 +111,26 @@ class ArticlePageImageGallery(Orderable):
     ]
 
 
+class TutorialPage(ArticlePage):
+    template = "core/content_page.html"
+    """
+    Multi-part tutorial page
+    """
+    class Meta:
+        verbose_name = "Tutorial"
+        verbose_name_plural = "Tutorials"
+
+
+class StoryPage(ArticlePage):
+    template = "core/content_page.html"
+    """
+    Single story page
+    """
+    class Meta:
+        verbose_name = "Story"
+        verbose_name_plural = "Stories"
+
+
 class FlexPage(Page):
     """
     Generic page - mostly static information
@@ -100,57 +154,3 @@ class FlexPage(Page):
     class Meta:
         verbose_name = "Flex Page"
         verbose_name_plural = "Flex Pages"
-
-
-class TutorialPage(ArticlePage):
-    template = "core/content_page.html"
-    """
-    Multi-part tutorial page
-    """
-    class Meta:
-        verbose_name = "Tutorial"
-        verbose_name_plural = "Tutorials"
-
-
-class TutorialPageList(Page):
-    max_count = 1  # Limits the number of core page instances
-
-    def get_context(self, request, *args, **kwargs):
-        """
-        Lists published live tutorials
-
-        :return: default context plus list of tutorials
-        """
-        context = super().get_context(request, *args, **kwargs)
-        context['tutorials'] = TutorialPage.objects.live().public()
-        return context
-
-    class Meta:
-        verbose_name = "Tutorials List"
-
-
-class StoryPage(ArticlePage):
-    template = "core/content_page.html"
-    """
-    Single story page
-    """
-    class Meta:
-        verbose_name = "Story"
-        verbose_name_plural = "Stories"
-
-
-class StoryPageList(Page):
-    max_count = 1  # Limits the number of core page instances
-
-    def get_context(self, request, *args, **kwargs):
-        """
-        Lists published live stories
-
-        :return: default context plus list of stories
-        """
-        context = super().get_context(request, *args, **kwargs)
-        context['stories'] = StoryPage.objects.live().public()
-        return context
-
-    class Meta:
-        verbose_name = "Stories List"
