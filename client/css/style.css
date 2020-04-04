@@ -280,3 +280,7 @@ div.rich-text p{
 .twitter-embedded{
     margin-bottom: 20vh;
 }
+
+.img-fluid {
+    border-radius: 0.5rem;
+}
