@@ -217,15 +217,10 @@ input[type="search"], textarea {
 }
 
 #subscribe {
-    border-radius: 0.5rem;
-}
-
-#subscribe:hover {
     background-color: #f9aa33;
     border-radius: 0.5rem;
     color: #3a4750;
 }
-
 
 .link-redirect:hover {
     color: #f9aa33 !important;
@@ -283,4 +278,9 @@ div.rich-text p{
 
 .img-fluid {
     border-radius: 0.5rem;
+}
+
+.text-muted {
+    color: #959595;
+    font-weight: 400;
 }
