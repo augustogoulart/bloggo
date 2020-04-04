@@ -103,6 +103,7 @@ class FlexPage(Page):
 
 
 class TutorialPage(ArticlePage):
+    template = "core/content_page.html"
     """
     Multi-part tutorial page
     """
@@ -129,7 +130,7 @@ class TutorialPageList(Page):
 
 
 class StoryPage(ArticlePage):
-    template = "core/tutorial_page.html"
+    template = "core/content_page.html"
     """
     Single story page
     """
