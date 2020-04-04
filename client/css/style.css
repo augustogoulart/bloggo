@@ -64,12 +64,12 @@ body{
 
 /*fonts*/
 .round-corner {
-    border-radius: 0.5rem;
+    border-radius: 10px;
 }
 
 .round-corner-top {
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 a, a:hover {
@@ -153,8 +153,8 @@ input[type="search"], textarea {
     height: 100%;
     padding: 2vh;
     background-color: #344955;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .card-img-top {
@@ -166,7 +166,7 @@ input[type="search"], textarea {
 }
 
 .btn-item-subscribe {
-    border-radius: 0.5rem;
+    border-radius: 10px;
     border: 2px solid #383838;
     text-align: center;
 }
@@ -218,7 +218,7 @@ input[type="search"], textarea {
 
 #subscribe {
     background-color: #f9aa33;
-    border-radius: 0.5rem;
+    border-radius: 10px;
     color: #3a4750;
 }
 
@@ -277,10 +277,15 @@ div.rich-text p{
 }
 
 .img-fluid {
-    border-radius: 0.5rem;
+    border-radius: 10px;
 }
 
 .text-muted {
     color: #959595;
     font-weight: 400;
 }
+
+.block-code {
+    border-radius: 10px;
+}
+
