@@ -1,0 +1,9 @@
+[run]
+omit =
+    bloggo/wsgi.py
+    bloggo/settings.py
+    bloggo/urls.py
+    bloggo/storage_backends.py
+    manage.py
+    */migrations/*
+

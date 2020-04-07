@@ -57,6 +57,14 @@ jobs:
       run: |
         pipenv run pytest
 
+    - name: Coveralls
+      run: |
+        pipenv run coveralls
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        COVERALLS_SERVICE_NAME: ${{ secrets.COVERALLS_SERVICE_NAME }}
+
+
     - name: Deploy to Heroku
       env:
         HEROKU_AUTH_TOKEN: ${{ secrets.HEROKU_AUTH_TOKEN }}

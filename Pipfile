@@ -19,6 +19,8 @@ pytest-django = "*"
 boto3 = "*"
 django-storages = "*"
 wagtailcodeblock = {editable = true,git = "https://github.com/augustogoulart/wagtailcodeblock.git",ref = "master"}
+pytest-cov = "*"
+coveralls = "*"
 
 [requires]
 python_version = "3.7"

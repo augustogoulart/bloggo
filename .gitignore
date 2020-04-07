@@ -5,6 +5,7 @@ __pycache__
 staticfiles/
 .env
 media/
+.coverage
 
 .pytest_cache
 mediafiles/
