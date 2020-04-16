@@ -6,6 +6,7 @@ staticfiles/
 .env
 media/
 .coverage
+*.lock
 
 .pytest_cache
 mediafiles/
