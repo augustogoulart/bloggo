@@ -1,4 +1,4 @@
-def read_time(words):
+def readtime(words):
     """
     Medium.com reading time formula: 265 words per minute
 

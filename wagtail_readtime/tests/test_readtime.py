@@ -1,4 +1,4 @@
-from core.read_time import read_time
+from ..templatetags.readtime import readtime
 from random import random, choice
 
 
@@ -7,9 +7,9 @@ def test_calculate_read_time():
     two_and_a_half_minutes_text = ['word'] * int(265 * 2.5)
     ten_and_three_quarters_minutes_text = ['word'] * int(265 * 10.75)
 
-    one_minute = read_time(one_minute_text)
-    two_and_a_half_minutes_rounds_to_two_minutes = read_time(two_and_a_half_minutes_text)
-    eleven_minutes_text = read_time(ten_and_three_quarters_minutes_text)
+    one_minute = readtime(one_minute_text)
+    two_and_a_half_minutes_rounds_to_two_minutes = readtime(two_and_a_half_minutes_text)
+    eleven_minutes_text = readtime(ten_and_three_quarters_minutes_text)
 
     assert one_minute == 1
     assert two_and_a_half_minutes_rounds_to_two_minutes == 2
@@ -25,7 +25,7 @@ def test_calculate_generic_text_integer_read_time():
     generic_read_time = choice(range(50))
     whole_text = one_minute_text * generic_read_time
 
-    time = read_time(whole_text)
+    time = readtime(whole_text)
 
     assert time == generic_read_time
 
@@ -38,6 +38,6 @@ def test_read_time_should_round_decimal_read_time():
     generic_read_time = choice(range(50)) * random_decimal_multiplier
     whole_text = ['word'] * int(265 * generic_read_time)
 
-    time = read_time(whole_text)
+    time = readtime(whole_text)
 
     assert time == round(generic_read_time)
