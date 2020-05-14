@@ -38,9 +38,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install pipenv
-        pipenv install
+        pip install -r requirements.txt
 
     - name: Copy environment variables
       run: |
@@ -48,18 +46,18 @@ jobs:
 
     - name: Migrate testing database
       run: |
-        pipenv run python manage.py migrate
+        python manage.py migrate
       env:
         POSTGRES_HOST: 0.0.0.0
         POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
 
     - name: Run test suite
       run: |
-        pipenv run pytest
+        pytest
 
     - name: Coveralls
       run: |
-        pipenv run coveralls
+        coveralls
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
         COVERALLS_SERVICE_NAME: ${{ secrets.COVERALLS_SERVICE_NAME }}

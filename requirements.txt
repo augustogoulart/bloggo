@@ -70,9 +70,9 @@ Unidecode==1.1.1
 urllib3==1.25.9
 wagtail==2.9
 wagtail-opengraph-image-generator==1.0.1
--e git+https://github.com/augustogoulart/wagtailcodeblock.git@d37aba484ee528a62b71bc39d8a9b94da4419c18#egg=wagtailcodeblock
 wcwidth==0.1.9
 webencodings==0.5.1
 Willow==1.3
 XlsxWriter==1.2.8
 zipp==3.1.0
+-e git://github.com/augustogoulart/wagtailcodeblock.git#egg=wagtailcodeblock
