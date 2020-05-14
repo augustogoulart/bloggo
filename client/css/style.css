@@ -54,13 +54,11 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/*Dark Theme*/
+/*
+Credits for the color theme goes to:
+https://colorsinspo.com/
 
-body{
-    background-color: #232f34;
-}
-/* /Dark Theme*/
-
+*/
 
 /*fonts*/
 .round-corner {
@@ -83,6 +81,7 @@ a, a:hover {
     font-weight: 600;
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
+    letter-spacing: .1rem;
 }
 
 .post-card-content {
@@ -143,6 +142,9 @@ input[type="search"], textarea {
 .card-article {
     margin-bottom: 2vh;
 }
+.card{
+    background-color: #1f4287;
+}
 
 .card-body {
     min-height: 25vh;
@@ -152,7 +154,6 @@ input[type="search"], textarea {
     width: 100%;
     height: 100%;
     padding: 2vh;
-    background-color: #344955;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -167,14 +168,13 @@ input[type="search"], textarea {
 
 .btn-item-subscribe {
     border-radius: 10px;
-    border: 2px solid #383838;
     text-align: center;
 }
 
 /* Brand */
 .name-logo {
     font-family: 'Poppins', sans-serif;
-    color: #f9aa33;
+    color: #21e6c1;
     font-weight: 500;
     font-size: 1.8rem;
 }
@@ -217,13 +217,12 @@ input[type="search"], textarea {
 }
 
 #subscribe {
-    background-color: #f9aa33;
+    background-color: #278ea5;
     border-radius: 10px;
-    color: #3a4750;
 }
 
 .link-redirect:hover {
-    color: #f9aa33 !important;
+    color: #21e6c1 !important;
     transition: 0.2s;
 }
 
@@ -235,7 +234,7 @@ html {
 }
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
-  background-color: #303841;
+  background-color: #071e3d;
 }
 .footer {
   position: absolute;
@@ -284,6 +283,6 @@ div.rich-text p{
 }
 
 .twitter-card {
-    background-color: #f9aa33;
+    background-color: #21e6c1;
     color: #344955;
 }
