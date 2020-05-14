@@ -21,7 +21,6 @@ django-storages = "*"
 wagtailcodeblock = {editable = true,git = "https://github.com/augustogoulart/wagtailcodeblock.git",ref = "master"}
 pytest-cov = "*"
 coveralls = "*"
-shell-plus = "*"
 django-extensions = "*"
 
 [requires]
