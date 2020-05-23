@@ -77,9 +77,9 @@ a, a:hover {
 }
 
 .post-card-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #FFFFFF;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     letter-spacing: .1rem;
 }
@@ -89,8 +89,8 @@ a, a:hover {
 }
 
 .post-card-text {
-    color: #FFFFFF;
-    font-size: 1.1rem;
+    color: #bbb;
+    font-size: 1rem;
     line-height: 22px;
     font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif
 }
@@ -106,8 +106,8 @@ input[type="search"], textarea {
 }
 
 .card-bottom {
-    color: #a7a7a7;
-    font-size: 16px;
+    color: rgba(187, 187, 187, 0.5);
+    font-size: 1rem;
     line-height: 22px;
     font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif
 }
