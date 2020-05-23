@@ -53,7 +53,7 @@ jobs:
 
     - name: Run test suite
       run: |
-        pytest
+        pytest core
 
     - name: Coveralls
       run: |
