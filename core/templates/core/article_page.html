@@ -14,14 +14,14 @@
   <div class="container article-content">
     <div class="row justify-content-md-center">
 
-      <div class="col-12 text-center">
-        <h1 class="display-6 article-title">{{ self.article_title }}</h1>
+      <div class="col-8">
+        <h1 class="article-title">{{ self.article_title }}</h1>
         <p>
           {{ self.headline }}
         </p>
       </div>
 
-      <div class="col-12 text-center">
+      <div class="col-8 text-md-right">
         <div class="text-muted">
           {{ self.created_at|date:"M d, Y" }}
           {#          <span>•</span>#}

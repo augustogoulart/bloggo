@@ -276,6 +276,7 @@ div.rich-text p{
 .text-muted {
     color: #959595;
     font-weight: 400;
+    font-size: 1rem;
 }
 
 .block-code {
