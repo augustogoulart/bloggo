@@ -30,7 +30,6 @@ class ContentPage(Page):
     """
     Standard Article instance
     """
-    article_title = models.CharField(max_length=255)
     headline = models.CharField(max_length=255)
     twitter_link = models.CharField(max_length=2048, default="")
     cover = models.ForeignKey(
@@ -51,7 +50,6 @@ class ContentPage(Page):
     )
 
     content_panels = Page.content_panels + [
-        FieldPanel("article_title"),
         FieldPanel("headline"),
         ImageChooserPanel("cover"),
         FieldPanel("cover_alt"),
