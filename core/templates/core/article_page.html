@@ -38,17 +38,17 @@
 
     </div>
     <div class="row justify-content-center">
-      <div class="col-md-8 col-sm-12 article-content">
+      <div class="col-md-6 col-sm-12">
         {% for block in page.content %}
           {% include_block block %}
         {% endfor %}
         <small class="text-muted">Article updated {{ self.updated_at|naturaltime }}.</small>
 
-        <a href="{{ self.twitter_link }}" target="_blank" rel="noopener">
-          <div class="twitter-card d-flex justify-content-center m-lg-5 m-sm-2 round-corner">
-            <h2 class="">Discuss on Twitter</h2>
-          </div>
-        </a>
+{#        <a href="{{ self.twitter_link }}" target="_blank" rel="noopener">#}
+{#          <div class="twitter-card d-flex justify-content-center m-lg-5 m-sm-2 round-corner">#}
+{#            <h2 class="">Discuss on Twitter</h2>#}
+{#          </div>#}
+{#        </a>#}
 
       </div>
     </div>

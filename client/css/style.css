@@ -112,21 +112,14 @@ input[type="search"], textarea {
     font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
-.article-content {
-    margin-bottom: 4rem;
-}
-
-.article-title {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 1rem;
-    color: #FFFFFF;
-}
-
-.article-content {
+p {
     font-family: system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+    color: #909595;
 }
 
 .card {
@@ -210,7 +203,7 @@ input[type="search"], textarea {
 }
 
 .navbar-light .navbar-nav .nav-link, .nav-link:hover {
-    color: #FFFFFF;
+    color: #e0dcdc;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
@@ -252,17 +245,15 @@ pre[class*=language-] {
     background: none!important;
 }
 
-div.rich-text h2, h3, h4{
+h1, h2, h3, h4{
     margin-top: 5vh;
     margin-bottom: 3vh;
-    color: #FFFFFF;
+    color: #e0dcdc;
+    font-weight: 700;
 }
 
-p{
-   color: #FFFFFF;
-}
 div.rich-text p{
-    color: #FFFFFF;
+    color: #e0dcdc;
 }
 
 .twitter-embedded{
@@ -281,9 +272,4 @@ div.rich-text p{
 
 .block-code {
     border-radius: 10px;
-}
-
-.twitter-card {
-    background-color: #21e6c1;
-    color: #344955;
 }
