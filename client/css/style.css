@@ -238,22 +238,18 @@ body {
 }
 
 pre[class*=language-] {
-    font-size: 0.75em !important;
+    font-size: 1em !important;
 }
 
 .language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
     background: none!important;
 }
 
-h1, h2, h3, h4{
+h1, h2, h4{
     margin-top: 5vh;
     margin-bottom: 3vh;
     color: #e0dcdc;
     font-weight: 700;
-}
-
-div.rich-text p{
-    color: #e0dcdc;
 }
 
 .twitter-embedded{
@@ -273,3 +269,22 @@ div.rich-text p{
 .block-code {
     border-radius: 10px;
 }
+
+.article-title {
+    font-size: 2rem;
+}
+
+.rich-text p{
+    margin-bottom: 4vh;
+    color: #e0dcdc;
+    line-height: 1.75rem;
+}
+
+.rich-text h3{
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    color: #e0dcdc;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
