@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'wagtailcodeblock',
     'storages',
+    'compressor',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -159,6 +160,7 @@ USE_TZ = True
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder'
 ]
 
 STATICFILES_DIRS = [
@@ -213,17 +215,19 @@ AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
 # s3 static settings
 AWS_LOCATION = 'static'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 if not DEBUG:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
     STATICFILES_STORAGE = 'bloggo.storage_backends.StaticStorage'
-
+    COMPRESS_STORAGE = STATICFILES_STORAGE
+    COMPRESS_URL = STATIC_URL
     PUBLIC_MEDIA_LOCATION = 'media'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
     DEFAULT_FILE_STORAGE = 'bloggo.storage_backends.PublicMediaStorage'
 
 else:
     STATIC_URL = '/staticfiles/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     MEDIA_URL = '/mediafiles/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
