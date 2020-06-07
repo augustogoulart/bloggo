@@ -81,7 +81,7 @@ Pygments = "==2.5.2"
 Unidecode = "==1.1.1"
 Willow = "==1.3"
 XlsxWriter = "==1.2.8"
-django = "*"
+django = "==3.0.7"
 pillow = "*"
 django-compressor = "*"
 
