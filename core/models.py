@@ -91,8 +91,6 @@ class FlexPage(Page):
     """
     Generic page - mostly static information
     """
-    page_title = models.CharField(max_length=255)
-
     content = StreamField(
         [
             ("richtext_editor", RichTextBlock()),
@@ -103,7 +101,6 @@ class FlexPage(Page):
     )
 
     content_panels = Page.content_panels + [
-        FieldPanel("page_title"),
         StreamFieldPanel("content")
     ]
 
