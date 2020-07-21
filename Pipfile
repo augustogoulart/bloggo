@@ -69,7 +69,7 @@ static3 = "==0.7.0"
 tinycss2 = "==1.0.2"
 traitlets = "==4.3.3"
 urllib3 = "==1.25.9"
-wagtail = "==2.9"
+wagtail = "==2.9.3"
 wagtail-opengraph-image-generator = "==1.0.1"
 wagtailcodeblock = {editable = true,git = "git://github.com/augustogoulart/wagtailcodeblock.git",ref = "ace872ee5633ee243c86613cb64cf01caf249f0d"}
 wcwidth = "==0.1.9"
